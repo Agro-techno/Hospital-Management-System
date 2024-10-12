@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 @Service
@@ -55,7 +56,17 @@ public class HmsPatientServiceImpl implements HmsPatientService {
 
     @Override
     public List<PatientResponse> getAllPatient() {
-        return List.of();
+        List<PatientResponse> patientResponses =new ArrayList<>();
+        List<Patient> patients=patientRepository.findAll();
+        for(Patient p:patients){
+            PatientResponse patientResponse=new PatientResponse();
+            patientResponse.setPatientId(p.getPatientId());
+            patientResponse.setPatientName(p.getPatientName());
+            patientResponse.setPatientAge(p.getPatientAge());
+            patientResponse.setPatientGender(p.getPatientGender());
+            patientResponses.add(patientResponse);
+        }
+        return patientResponses;
     }
 
     @Override

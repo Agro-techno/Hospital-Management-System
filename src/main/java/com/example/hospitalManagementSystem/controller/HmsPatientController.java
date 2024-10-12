@@ -9,6 +9,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 
 @Controller
 @ResponseBody()
@@ -26,6 +28,11 @@ public class HmsPatientController {
   public ResponseEntity<PatientResponse> getPatientById(@PathVariable("patientId") String patientId){
       return new ResponseEntity<>(hmsPatientServiceImpl.getPatientById(patientId),HttpStatus.OK);
   }
+
+    @GetMapping("/getAllPatient")
+    public ResponseEntity<List<PatientResponse>> getAllPatient(){
+        return new ResponseEntity<>(hmsPatientServiceImpl.getAllPatient(),HttpStatus.OK);
+    }
   @PostMapping("/addPatient")
   public ResponseEntity<String> addPatient(@RequestBody PatientRequest patientRequest){
         return  new ResponseEntity<>(hmsPatientServiceImpl.addPatient(patientRequest),HttpStatus.CREATED);
