@@ -15,7 +15,6 @@ public class HmsPatientServiceImpl implements HmsPatientService {
     @Autowired
     PatientRepository patientRepository;
 
-    //Patient Methods Impl============
 
     @Override
     public String addPatient(PatientRequest patientRequest) {
@@ -74,62 +73,3 @@ public class HmsPatientServiceImpl implements HmsPatientService {
         return null;
     }
 }
-
-
-    //Doctor Methods Impl=====================================================
-
-
-
-//    public String addEmployee(EmployeeRequest employeeRequest) {
-//        Employee employee = new Employee();
-//        employee.setEmpCity(employeeRequest.getEmpCity());
-//        employee.setEmpId(employeeRequest.getEmpId());
-//        employee.setEmpName(employeeRequest.getEmpName());
-//        employee.setEmpDepartment(employeeRequest.getEmpDepartment());
-//        employee.setEmpSalary(employeeRequest.getEmpSalary());
-//        //employeeList.add(employee);
-//        employeeRepo.save(employee);
-//        return "Employee added successfully with ID " + employee.getEmpId();
-//    }
-
-
-
-//    public String addPatient(PatientRequest patientRequest){
-//
-//        return "Jai Shree Ram";
-//    }
-//    public String updatePatient(PatientRequest patientRequest){
-//        return "Jai Shree Ram";
-//    }
-//    public String deletePatient(String patientId){
-//        return "Jai Shree Ram";
-//    }
-//    public List<PatientResponse> getAllPatient(){
-//        List <PatientResponse> a=new ArrayList<>();
-//        return a;
-//    }
-//    public PatientResponse getPatientById(String patientId){
-//        return new PatientResponse();
-//
-//    }
-//
-//
-//
-//    public String addDoctor(DoctorRequest doctorRequest){
-//        return "Jai Shree Ram";
-//    }
-//    public  String updateDoctor(DoctorRequest doctorRequest){
-//        return "Jai Shree Ram";
-//    }
-//    public  String deleteDoctor(String doctorId){
-//        return "Jai Shree Ram";
-//    }
-//    public DoctorResponse getDoctorByDoctorId(String doctorId){
-//        return new DoctorResponse();
-//
-//    }
-//    public List<DoctorResponse> getAllDoctor(){
-//        List <DoctorResponse> b=new ArrayList<>();
-//        return b;
-//    }
-
