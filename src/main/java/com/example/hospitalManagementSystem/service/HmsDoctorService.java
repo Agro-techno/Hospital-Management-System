@@ -11,4 +11,6 @@ public interface HmsDoctorService {
     public  String deleteDoctor(String doctorId);
     public DoctorResponse getDoctorByDoctorId(String doctorId);
     public List<DoctorResponse> getAllDoctor();
+
+    public DoctorResponse getDoctorById( String doctorId);
 }

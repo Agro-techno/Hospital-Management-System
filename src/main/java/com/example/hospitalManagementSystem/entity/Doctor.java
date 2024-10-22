@@ -14,7 +14,7 @@ import lombok.ToString;
 public class Doctor {
     @Id
     private String doctorId;
-
+    private int age;
     private String doctorName;
     private String doctorSpecialization;
 
