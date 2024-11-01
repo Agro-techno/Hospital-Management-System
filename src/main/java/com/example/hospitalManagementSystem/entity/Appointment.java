@@ -1,15 +1,26 @@
 package com.example.hospitalManagementSystem.entity;
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import java.time.LocalDateTime;
 
-import java.util.Date;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@AllArgsConstructor
+@NoArgsConstructor
 @Getter
 @Setter
-@ToString
+@Entity
+@Table(name="appointments")
 public class Appointment {
-    private String appointmentID;
-    private Date appointmentDate;
+	@Id
+	private String appointmentId;
+	private LocalDateTime appointDate;
+	private String status;
+	
 
 }
